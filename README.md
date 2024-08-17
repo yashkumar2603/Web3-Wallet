@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Plan:
+Web3 wallet that can generate public and private key pairs, also the seed phrase.
+Basically more like a phantom and backpack wallets
+References - 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Future scale
+Have a Extension support as well
+Query the blockchain for balance and all
 
-Currently, two official plugins are available:
+## Features -
+- Generate Public and Private key pairs
+- Generate seed phrase
+- sign transactions 
+- Export seed phrase, private key 
+- Import seed phrase and generate the private keys from it
+- Import wallet 
+- Export wallet 
+- Create wallet and delete wallet 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Framework -
+React
+Infura API for fetching the balance and shit
+Rest of the standard libraries for generating sed phrase and keys from them
 
-## Expanding the ESLint configuration
+### Timeline - 
+Make within 3 - 4 days
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```

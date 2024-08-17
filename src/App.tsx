@@ -64,7 +64,7 @@ function App() {
         </>
         )}
       </div>
-      <h1 className="text-4xl font-bold mt-6 mb-4">Bakchodi Wallet</h1>
+      <h1 className="text-4xl font-bold mt-6 mb-4">Walleteer</h1>
       {mnemonic && (
         <div>
             <button onClick={createWallet}>add new Wallet</button>
