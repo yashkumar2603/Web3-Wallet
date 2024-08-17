@@ -2,11 +2,8 @@ import { useState } from 'react'
 import { Buffer } from "buffer";
 window.Buffer = window.Buffer || Buffer;
 import { generateMnemonic, mnemonicToSeedSync } from "bip39";
-import { derivePath } from "ed25519-hd-key";
 import { ethers } from "ethers";
 import bs58 from "bs58";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
