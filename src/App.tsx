@@ -17,9 +17,7 @@ function App() {
 
   const createAccount = async () => {
     const newMnemonic = generateMnemonic();
-    //console.log(newMnemonic);
-    setMnemonic(newMnemonic); 
-    //console.log(mnemonic);
+    setMnemonic(newMnemonic);
   };
   
   const createWallet = async () => {
@@ -46,13 +44,21 @@ function App() {
     alert(`${text.length > 40 ? 'Private' : 'Public'} key copied to clipboard!`);
   };
 
+
   return (
     <>
       <div>
-        {!mnemonic && <button onClick={createAccount}>Create Seed Phrase</button>}
+        {!mnemonic && (
+            <>
+              <div className="flex flex-col gap-3">
+                <button onClick={createAccount}>Create Seed Phrase</button>
+                <input className="rounded flex placeholder: text-center bg-gray-800 w-[18rem] h-[2.5rem]" placeholder="Or recover from seed phrase" value={mnemonic} onChange={(e) => setMnemonic(e.target.value)}/>
+              </div>
+            </>
+        )}
         {mnemonic && (
-        <>          
-          <h2 className="text-xl font-semibold mb-4">Your Mnemonic Phrase</h2>
+            <>
+            <h2 className="text-xl font-semibold mb-4">Your Mnemonic Phrase</h2>
           <div className="flex bg-ivore-100 rounded-md flex-wrap gap-2">
             {mnemonic.split(" ").map((word, index) => (
               <div className="bg-purple-800 p-2 rounded-md" key={index}>{word}</div>
