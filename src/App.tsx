@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { generateMnemonic, mnemonicToSeedSync } from "bip39";
+import { Buffer } from "buffer";
+window.Buffer = window.Buffer || Buffer;
 import { ethers } from "ethers";
 import './App.css'
 import axios from 'axios';
