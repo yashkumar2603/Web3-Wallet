@@ -1,4 +1,6 @@
 # Plan:
+[live site](https://web3-wallet-theta.vercel.app/)
+
 Web3 wallet that can generate public and private key pairs, also the seed phrase.
 Basically more like a phantom and backpack wallets
 References - 
